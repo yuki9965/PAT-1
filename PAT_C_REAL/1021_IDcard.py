@@ -2,7 +2,7 @@
 __author__ = 'Yaicky'
 import sys
 
-wight = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
+weight = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
 Z = {'0':'1', '1':'0', '2':'X', '3':'9', '4':'8', '5':'7', '6':'6', '7':'5', '8':'4', '9':'3', '10':'2'}
 cur, all = 0, 0
 rlt = []
@@ -22,7 +22,7 @@ for line in sys.stdin:
                 sumNum = -1
                 break
             else:
-                sumNum += int(idcard[n]) * wight[n]
+                sumNum += int(idcard[n]) * weight[n]
         if(sumNum != -1 and Z[str(int(sumNum%11))] != idcard[17]):
             rlt.append(''.join(idcard))
 
@@ -34,6 +34,7 @@ if len(rlt):
     print('\n'.join(rlt))
 else:
     print("All passed")
+
 
 '''
 4
